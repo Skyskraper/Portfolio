@@ -9,9 +9,12 @@ const Contact = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending...");
+
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "0c7e88dc-f07f-404a-931e-d990600e566c");
+    // REMOVE this line (duplicate key)
+    // formData.append("access_key", "0c7e88dc-f07f-404a-931e-d990600e566c");
+
     formData.append("from_name", "Website Contact Form");
     formData.append("subject", "New Contact Form Submission");
 
@@ -26,7 +29,7 @@ const Contact = () => {
       setResult("Message sent successfully ✔");
       event.target.reset();
     } else {
-      setResult("Failed to send message ❌");
+      setResult("Failed to send message ❌");
     }
   };
   return (
@@ -73,9 +76,9 @@ const Contact = () => {
                   <div className="flex flex-col sm:flex-row gap-4 mt-5">
                     <input
                       type="text"
-                      placeholder="E-mail ID"
+                      placeholder="Email ID"
                       required
-                      name='e-mail'
+                      name='email'
                       className="text-white w-full bg-black border border-[#22272c] rounded-lg px-4 py-3"
                     />
                     <input
@@ -104,7 +107,7 @@ const Contact = () => {
                   <p className="text-white mt-2 text-sm">{result}</p>
 
                 </form>
-             
+
 
 
 
