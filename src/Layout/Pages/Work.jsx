@@ -48,7 +48,7 @@ const Work = () => {
                   </div>
                   <div>
                     <h1 className='text-white lg:text-[26px] md:text-[26px] text-[20px] font-[600]'>
-                      CIB on the Mobile
+                      frontend development
                     </h1>
                     <p className='text-white text-[12px] font-[500] mb-3'>Take your client onboard seamlessly by our amazing tool of digital onboard process.</p>
                     <button className=' bg-[#2C1250] px-6 py-2 border-1 border-[#693B93] text-white rounded-[15px] '>
