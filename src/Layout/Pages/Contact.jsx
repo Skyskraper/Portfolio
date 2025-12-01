@@ -123,8 +123,13 @@ const Contact = () => {
                   <IoCallOutline />
                 </div>
                 <div className="text-white">
+
                   <p className="text-gray-300">Phone</p>
-                  <span className="text-xl font-medium">7318443847</span>
+                  <a href='tel:+917318443847'>
+                    <span className="text-xl font-medium">+917318443847</span>
+
+                  </a>
+
                 </div>
               </div>
 
@@ -135,7 +140,11 @@ const Contact = () => {
                 </div>
                 <div className="text-white">
                   <p className="text-white">E-mail</p>
-                  <span className="text-xl font-medium">abhimanyukharwar65@gmail.com</span>
+                  <a href='mailto:abhimanyukharwar65@gmail.com'>
+                    <span className="text-xl font-medium">abhimanyukharwar65@gmail.com</span>
+
+                  </a>
+                  
                 </div>
               </div>
 
