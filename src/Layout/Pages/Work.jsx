@@ -1,122 +1,70 @@
-import React from 'react'
-import skill1 from '../../assets/Group 2.png'
-import skill2 from '../../assets/Group 1935.png'
-import Cup from '../../assets/Group 1938.png'
-import Drop from '../../assets/Group 1.png'
+import React from "react";
+import skill1 from "../../assets/Group 2.png";
+import skill2 from "../../assets/Group 1935.png";
+import Cup from "../../assets/Group 1938.png";
+import Drop from "../../assets/Group 1.png";
 
 const Work = () => {
+  const experiences = [
+    {
+      title: "Full Stack Development",
+      desc: "Built responsive web applications using React, Tailwind CSS, Node.js and Express. Implemented authentication, REST APIs and deployed projects on Vercel.",
+      img: skill1,
+    },
+    {
+      title: "Backend & API Development",
+      desc: "Designed and tested RESTful APIs using Node.js and Express. Worked with Postman for API testing and handled database integration.",
+      img: skill2,
+    },
+    {
+      title: "Data Structures & Algorithms",
+      desc: "Solved 1000+ problems on LeetCode. Strong understanding of arrays, trees, graphs, dynamic programming and problem-solving strategies.",
+      img: Cup,
+    },
+    {
+      title: "Machine Learning Basics",
+      desc: "Exploring Machine Learning fundamentals using Python. Learning supervised models, data preprocessing and core ML concepts.",
+      img: Drop,
+    },
+  ];
+
   return (
-    <>
-      <section className='bg-[#11071F] py-12 '>
-        <div className='container mx-auto px-4 max-w-6xl'>
-          <h1 className='lg:text-3xl md:text-3xl text-2xl text-white font-bold mb-10 text-center'>
-            Work Experience
-          </h1>
+    <section className="bg-[#0F071B] py-20">
+      <div className="max-w-6xl mx-auto px-6">
 
-          <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1  gap-8 px-5'>
-            {/* First Skill */}
-            <div className='col-span-1'>
-              <div className=' rounded-xl border-t-4 border-[#4F228D] lg:p-5 md:p-5 p-2 '>
-
-                <div className=' flex items-center  gap-5 '>
-                  <div className=''>
-                    <img src={skill1} alt='star' className='' />
-                  </div>
-                  <div className=''>
-                    <h1 className='text-white  lg:text-[26px] md:text-[26px] text-[20px] font-[600]'>CIB on the Mobile</h1>
-                    <p className='text-white text-[12px] font-[500] mb-3'>Take your client onboard seamlessly by our amazing tool  of digital onborad process</p>
-                    <button className=' bg-[#2C1250] px-6 py-2 border-1 border-[#693B93] text-white rounded-[15px]'>
-                      Learn More
-                    </button>
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 text-center">
+          Technical{" "}
+          <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+            Skills
+          </span>
+        </h1>
 
 
-                  </div>
+        <div className="grid md:grid-cols-2 gap-10">
 
-
+          {experiences.map((item, index) => (
+            <div
+              key={index}
+              className="bg-[#1A0B2E] border border-purple-600 rounded-xl p-6 hover:scale-105 transition duration-300"
+            >
+              <div className="flex items-start gap-5">
+                <img src={item.img} alt="icon" className="w-14 h-14" />
+                <div>
+                  <h2 className="text-white text-xl font-semibold mb-2">
+                    {item.title}
+                  </h2>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
-
-
             </div>
-
-            {/* Second Skill */}
-            <div className='col-span-1 '>
-              <div className=' rounded-xl border-t-4 border-[#4F228D] p-5'>
-                <div className='flex items-center gap-5'>
-                  <div>
-                    <img src={skill2} alt='Bulb' className=' h-22 ' />
-                  </div>
-                  <div>
-                    <h1 className='text-white lg:text-[26px] md:text-[26px] text-[20px] font-[600]'>
-                      frontend development
-                    </h1>
-                    <p className='text-white text-[12px] font-[500] mb-3'>Take your client onboard seamlessly by our amazing tool of digital onboard process.</p>
-                    <button className=' bg-[#2C1250] px-6 py-2 border-1 border-[#693B93] text-white rounded-[15px] '>
-                      Learn More
-                    </button>
-
-                  </div>
-
-
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 mt-5 gap-8 px-5'>
-            <div className='col-span-1'>
-              <div className='rounded-xl border-t-3 border-[#4F228D] p-5'>
-                <div className='flex items-center gap-5'>
-                  <div>
-                    <img src={Cup} alt='image'/>
-                  </div>
-                  <div>
-                    <h1 className='text-white lg:text-[26px] md:text-[26px] text-[20px] font-[600]'>CIB on the Mobile</h1>
-                    <p className='text-white text-[12px] font-[500] mb-3'>Take your client onboard seamlessly by our amazing tool of digital onboard process.</p>
-                    <button className='bg-[#2C1250] py-2 px-6 text-white rounded-[15px] border-1 border-[#693B93]'>
-                      Learn More
-                    </button>
-                  </div>
-
-
-                </div>
-
-              </div>
-
-            </div>
-            <div className='col-span-1'>
-              <div className='rounded-xl border-t-3 border-[#4F228D] p-5'>
-                <div className='flex items-center gap-5'>
-                  <div>
-                    <img src={Drop} alt='image'/>
-                  </div>
-                  <div>
-                    <h1 className='text-white lg:text-[26px] md:text-[26px] text-[20px] font-[600]'>CIB on the Mobile</h1>
-                    <p className='text-white text-[12px] font-[500] mb-3'>
-                      Take your client onboard seamlessly by our amazing tool of digital onboard process.
-                    </p>
-                     <button className='bg-[#2C1250] py-2 px-6 text-white rounded-[15px] border-1 border-[#693B93]'>
-                      Learn More
-                    </button>
-
-                  </div>
-
-                </div>
-
-              </div>
-
-
-            </div>
-
-          </div>
-
+          ))}
 
         </div>
-      </section>
+      </div>
+    </section>
+  );
+};
 
-    </>
-  )
-}
-
-export default Work
+export default Work;
