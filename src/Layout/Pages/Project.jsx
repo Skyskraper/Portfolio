@@ -1,7 +1,7 @@
 import React from "react";
 import background from "../../assets/Screenshot 2022-09-30 at 10.49 3.png";
 import Project1 from "../../assets/Screenshot 2025-10-31 185730.png";
-import Food from "../../assets/Screenshot 2025-11-01 191750.png";
+import Food from "../../assets/Screenshot 2026-02-28 200635.png";
 
 const ProjectCard = ({ title, description, image, reverse, liveLink }) => {
   return (
@@ -86,6 +86,7 @@ const Project = () => {
           description="A fully responsive food delivery web app allowing users to browse restaurants, manage carts, and place orders seamlessly. Built with intuitive UX, fast navigation, and production-ready scalable architecture."
           image={Food}
           reverse
+          liveLink="https://food-delivery-peach-six.vercel.app/"
         />
 
       </div>
